@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using MetierDico;
 namespace WpfEntrainementDico3
 {
     /// <summary>
@@ -24,6 +24,7 @@ namespace WpfEntrainementDico3
         {
             InitializeComponent();
         }
+        Dictionary<string, List<Commercial>> dico;
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MetierDico
 {
-    class Commercial
+    public class Commercial
     {
         private string nomCommercial;
         private List<Vente> lesVentes;

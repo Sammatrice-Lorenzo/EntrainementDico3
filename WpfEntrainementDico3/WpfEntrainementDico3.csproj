@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MetierDico\MetierDico.csproj">
+      <Project>{e1069bfa-cb91-413d-886a-f0436f160ae4}</Project>
+      <Name>MetierDico</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
