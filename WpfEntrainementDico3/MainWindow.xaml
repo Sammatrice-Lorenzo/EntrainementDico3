@@ -17,7 +17,7 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <ListBox  Name="lstSecteurs" Grid.Row="0" Grid.Column="0">
+        <ListBox  Name="lstSecteurs" Grid.Row="0" Grid.Column="0" SelectionChanged="lstSecteurs_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -26,7 +26,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <ListBox Name="lstCommerciaux" Grid.Row="0" Grid.Column="1">
+        <ListBox Name="lstCommerciaux" Grid.Row="0" Grid.Column="1" SelectionChanged="lstCommerciaux_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -46,7 +46,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button x:Name="btnInserer" Content="Insérer " Grid.Row="1" Grid.Column="0"></Button>
+        <Button x:Name="btnInserer" Content="Insérer " Grid.Row="1" Grid.Column="0" Click="btnInserer_Click"></Button>
         <StackPanel  Grid.Row="1" Grid.Column="1" >
             <WrapPanel>
                 <TextBlock Width="100" Text="Secteur"></TextBlock>
