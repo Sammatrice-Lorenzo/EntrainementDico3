@@ -7,6 +7,64 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <ListBox  Name="lstSecteurs" Grid.Row="0" Grid.Column="0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox Name="lstCommerciaux" Grid.Row="0" Grid.Column="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding NomCommercial }"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox Name="lstVentes" Grid.Row="0" Grid.Column="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding NomClient}"></TextBlock>
+                        <Line Width="10"></Line>
+                        <TextBlock Text="{Binding Montant}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="btnInserer" Content="Insérer " Grid.Row="1" Grid.Column="0"></Button>
+        <StackPanel  Grid.Row="1" Grid.Column="1" >
+            <WrapPanel>
+                <TextBlock Width="100" Text="Secteur"></TextBlock>
+                <TextBox Width="100"  x:Name="txtNomSecteur"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Width="100" Text="Commercial"></TextBlock>
+                <TextBox Width="100"  x:Name="txtNomCommercial"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Width="100" Text="Client"></TextBlock>
+                <TextBox Width="100"  x:Name="txtNomClient"></TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock Width="100" Text="Montant"></TextBlock>
+                <TextBox Width="100"  x:Name="txtNbMontant"></TextBox>
+            </WrapPanel>
+        </StackPanel>
         
     </Grid>
 </Window>
